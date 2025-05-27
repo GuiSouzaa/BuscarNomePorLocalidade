@@ -1,7 +1,6 @@
 # 📋 Listar o nome pela Localidade
 
-Este é um script em Python que utiliza o pandas para consultar e exibir nomes de pessoas a partir de uma localidade informada. O programa lê uma planilha Excel e permite buscas interativas no terminal.
-
+Aplicação web simples para buscar nomes em uma planilha Excel, filtrando pela localidade, usando Flask e Pandas.
 ---
 
 ## 🚀 Funcionalidades
@@ -16,6 +15,7 @@ Este é um script em Python que utiliza o pandas para consultar e exibir nomes d
 ## 🛠️ Tecnologias utilizadas
 
 - Python
+- Flask
 - pandas
 
 
@@ -25,5 +25,6 @@ Este é um script em Python que utiliza o pandas para consultar e exibir nomes d
 2. Instale as dependências necessárias:
 
 ```bash
-pip install pandas 
+pip install pandas
+pip install flask
 
