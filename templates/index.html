@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscar Nome por Localidade</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='findFavic.png') }}" type="image/png" />
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Buscar Nome por Localidade</h1>
+
+        <form method="POST" action="/">
+            <input
+                type="text"
+                name="localidade"
+                placeholder="Digite a localidade"
+                required
+                autocomplete="off"
+            />
+            <button type="submit">Buscar</button>
+        </form>
+
+        <!-- Aqui o Flask vai inserir os resultados -->
+        {% if nomes %}
+        <div class="resultados">
+            <h2>Resultados:</h2>
+            <ul>
+                {% for nome in nomes %}
+                <li>{{ nome }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% elif request.method == 'POST' %}
+        <p class="sem-resultados">Nenhum nome encontrado.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
