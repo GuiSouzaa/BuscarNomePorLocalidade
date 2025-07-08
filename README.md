@@ -25,6 +25,8 @@ Aplicação web simples para buscar nomes em uma planilha Excel, filtrando pela 
 2. Instale as dependências necessárias:
 
 ```bash
-pip install pandas
 pip install flask
+pip install pandas
+pip install openpyxl
+
 
